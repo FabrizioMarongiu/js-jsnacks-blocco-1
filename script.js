@@ -58,10 +58,47 @@
 // Snack 2
 // Inserisci un numero, se è pari stampa il numero, se è dispari stampa il numero successivo
 
-var numero = parseInt(prompt('Inserisci un numero. Se è pari verrà stampato, altrimenti verrà stampato il numero successivo a quello che hai inserito'));
+// var numero = parseInt(prompt('Inserisci un numero. Se è pari verrà stampato, altrimenti verrà stampato il numero successivo a quello che hai inserito'));
 
-if ( numero % 2 === 0 ){
-    console.log('Il numero che hai inserito è pari. Hai inserito il numero: ', numero);
-}else{
-    console.log('Il numero che hai inserito è dispari, il successivo numero è: ', ++numero);
+// if ( numero % 2 === 0 ){
+//     console.log('Il numero che hai inserito è pari. Hai inserito il numero: ', numero);
+// }else{
+//     console.log('Il numero che hai inserito è dispari, il successivo numero è: ', ++numero);
+// }
+
+
+
+
+
+
+
+
+
+
+// Snack 3
+// Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una lista di cognomi, Gatsby vuole generare una falsa lista di 3 invitati.
+
+
+var nomi = ['paolo', 'fabrizio', 'laura', 'andrea', 'susanna'];
+
+var cognomi = ['rossi', 'bianchi', 'verdi', 'boschi', 'bruni'];
+
+var lista = 3;
+
+var invitati = [];
+
+for ( i = 0; i <  lista; i++){
+
+    var nomeRandom = Math.floor(Math.random() * nomi.length);
+
+    
+    var cognomeRandom = Math.floor(Math.random() * cognomi.length);
+
+    var personaRandom = nomi[nomeRandom] + ' ' + cognomi[cognomeRandom];
+
+    invitati.push(personaRandom);
+
+    console.log('La ', i + 1 , ' persona invitata è: ', personaRandom);
 }
+
+console.log('La lista degli invitati è: ', invitati);
