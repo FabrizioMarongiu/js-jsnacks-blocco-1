@@ -79,26 +79,56 @@
 // Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una lista di cognomi, Gatsby vuole generare una falsa lista di 3 invitati.
 
 
-var nomi = ['paolo', 'fabrizio', 'laura', 'andrea', 'susanna'];
+// var nomi = ['paolo', 'fabrizio', 'laura', 'andrea', 'susanna'];
 
-var cognomi = ['rossi', 'bianchi', 'verdi', 'boschi', 'bruni'];
+// var cognomi = ['rossi', 'bianchi', 'verdi', 'boschi', 'bruni'];
 
-var lista = 3;
+// var lista = 3;
 
-var invitati = [];
+// var invitati = [];
 
-for ( i = 0; i <  lista; i++){
+// for ( i = 0; i <  lista; i++){
 
-    var nomeRandom = Math.floor(Math.random() * nomi.length);
+//     var nomeRandom = Math.floor(Math.random() * nomi.length);
 
     
-    var cognomeRandom = Math.floor(Math.random() * cognomi.length);
+//     var cognomeRandom = Math.floor(Math.random() * cognomi.length);
 
-    var personaRandom = nomi[nomeRandom] + ' ' + cognomi[cognomeRandom];
+//     var personaRandom = nomi[nomeRandom] + ' ' + cognomi[cognomeRandom];
 
-    invitati.push(personaRandom);
+//     invitati.push(personaRandom);
 
-    console.log('La ', i + 1 , ' persona invitata è: ', personaRandom);
+//     console.log('La ', i + 1 , ' persona invitata è: ', personaRandom);
+// }
+
+// console.log('La lista degli invitati è: ', invitati);
+
+
+
+
+
+
+
+
+
+// Snack 4
+// Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari
+
+var numeri = [ 10 , 6 , 644 , 321 , 90 , 412 , 65 , 77 , 98 , 994 ];
+
+somma = 0;
+
+for ( var i = 0; i < numeri.length; i++ ){
+
+    if ( i % 2 !== 0 ){
+
+        console.log('Questo numero è in posizione dispari e verrà sommato: ', numeri[i]);
+
+        somma += numeri[i];
+
+        console.log('La somma parziale è; ', somma); 
+
+    }
 }
 
-console.log('La lista degli invitati è: ', invitati);
+console.log('La somma totale dei numeri in posizione dispari è: ', somma);
