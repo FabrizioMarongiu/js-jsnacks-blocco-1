@@ -114,21 +114,62 @@
 // Snack 4
 // Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari
 
-var numeri = [ 10 , 6 , 644 , 321 , 90 , 412 , 65 , 77 , 98 , 994 ];
+// var numeri = [ 10 , 6 , 644 , 321 , 90 , 412 , 65 , 77 , 98 , 994 ];
 
-somma = 0;
+// somma = 0;
 
-for ( var i = 0; i < numeri.length; i++ ){
+// for ( var i = 0; i < numeri.length; i++ ){
 
-    if ( i % 2 !== 0 ){
+//     if ( i % 2 !== 0 ){
 
-        console.log('Questo numero è in posizione dispari e verrà sommato: ', numeri[i]);
+//         console.log('Questo numero è in posizione dispari e verrà sommato: ', numeri[i]);
 
-        somma += numeri[i];
+//         somma += numeri[i];
 
-        console.log('La somma parziale è; ', somma); 
+//         console.log('La somma parziale è; ', somma); 
 
+//     }
+// }
+
+// console.log('La somma totale dei numeri in posizione dispari è: ', somma);
+
+
+
+
+
+
+
+
+
+// Snack 5 - Bonus
+// Crea due array di numeri che hanno un numero di elementi diversi.
+// Aggiungi elementi all’array che ha meno elementi fino a quando ne avrà tanti quanti l’altro.
+
+var contenitore1 = [ 10 , 6 , 644 , 321, 25 , 854 , 93];
+
+var contenitore2 = [ 25 , 98 , 64 , 7 ];
+
+console.log('Questi sono i numeri contenuti nel primo contenitore: ',contenitore1);
+
+console.log('Questi sono i numeri contenuti nel secondo contenitore: ',contenitore2);
+
+if ( contenitore1.length > contenitore2.length){
+    
+    var contatore = contenitore1.length - contenitore2.length;
+    
+    for ( var i = 0; i < contatore; i++ ){
+        contenitore2.push(Math.floor(Math.random() * 1000 ) +1);
     }
-}
+    console.log('Il secondo contenitore ha aggiunto ', contatore, ' numeri: ', contenitore2);
+}else if ( contenitore1.length < contenitore2.length ){
 
-console.log('La somma totale dei numeri in posizione dispari è: ', somma);
+    var contatore = contenitore2.length - contenitore1.length;
+    
+    for ( var i = 0; i < contatore; i++ ){
+        contenitore1.push(Math.floor(Math.random() * 1000 ) +1);
+    }
+    console.log('Il primo contenitore ha aggiunto ', contatore, ' numeri: ', contenitore1);
+
+}else{
+    console.log('I due contenitori hanno la stessa lunghezza.');
+}
